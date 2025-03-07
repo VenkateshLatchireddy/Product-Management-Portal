@@ -34,18 +34,14 @@ PDF Generation: React-PDF / jsPDF
 🛠 Installation & Setup
 
 1️⃣ Clone the repository
-sh
-Copy
-Edit
+
 git clone https://github.com/VenkateshLatchireddy/Product-Management-Portal.git
+
 cd Product-Management-Portal
 
 
 2️⃣ Install dependencies (Frontend & Backend)
 
-sh
-Copy
-Edit
 # Navigate to the frontend folder and install dependencies
 cd Frontend
 npm install
@@ -57,25 +53,25 @@ npm install
 
 3️⃣ Start the Backend Server (Runs on Port 5000)
 
-sh
-Copy
-Edit
+
 cd Backend
+
 node server.js
+
 The backend server will run at: http://localhost:5000
 
 
 4️⃣ Start the Frontend Server
 
-sh
-Copy
-Edit
+
 cd ../Frontend
 npm start
+
 The frontend will run at: http://localhost:3000
 
 This will ensure clear backend startup instructions using node server.js. 🚀
 Let me know if you need any modifications! 😊
+
 🖼 Project Screenshots
 
 ![Login Page](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/Frontend/src/assets/loginpage.png)
@@ -97,16 +93,17 @@ Role	Features
 Store Owner	Login, Manage Store Details, View & Download Invoices
 Admin	Manage All Stores & Products, Generate Reports
 User (Read-only)	View Store Products
+
 🚀 Future Enhancements
 Export Reports (Excel, CSV)
 Multi-user roles & permissions
 Email invoices to customers
 Graphical sales reports & insights
+
 🤝 Contributing
 Contributions are welcome! Feel free to fork the repo, create a new branch, and submit a pull request.
 
-📜 License
-This project is licensed under the MIT License.
+
 
 🎯 Let me know if you want any modifications! 🚀
 This version highlights your interview project professionally and makes it easy for the interviewer to understand your work.
