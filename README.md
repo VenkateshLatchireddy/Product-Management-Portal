@@ -10,15 +10,18 @@ Displays order details, including:
 Store Name, Order ID, Date, Quantity
 Regular Price, Deal Price, Item Total, Item-wise Tax
 Grand Total (with & without tax)
+
 ✅ Task 2: Product Management Portal (Mandatory)
 Displays all stores and products.
 CRUD operations (Edit, Delete, Update products).
 Allows filtering by store and searching by product name.
+
 ⚡ Task 3: Additional Features (Optional)
 Filter invoices by date and item.
 Generate invoices in PDF format.
 Store Owners can log in and manage their store details.
 View and download invoices securely.
+
 🎯 Technologies Used
 Frontend: React.js (Styled Components for UI)
 Backend: Node.js + Express.js
@@ -29,6 +32,7 @@ PDF Generation: React-PDF / jsPDF
 
 
 🛠 Installation & Setup
+
 1️⃣ Clone the repository
 sh
 Copy
@@ -38,6 +42,7 @@ cd Product-Management-Portal
 
 
 2️⃣ Install dependencies (Frontend & Backend)
+
 sh
 Copy
 Edit
@@ -51,6 +56,7 @@ npm install
 
 
 3️⃣ Start the Backend Server (Runs on Port 5000)
+
 sh
 Copy
 Edit
@@ -60,6 +66,7 @@ The backend server will run at: http://localhost:5000
 
 
 4️⃣ Start the Frontend Server
+
 sh
 Copy
 Edit
@@ -71,18 +78,18 @@ This will ensure clear backend startup instructions using node server.js. 🚀
 Let me know if you need any modifications! 😊
 🖼 Project Screenshots
 
-![Login Page](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/src/assets/loginpage.png)
+![Login Page](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/Frontend/src/assets/loginpage.png)
 
 
-![Products List](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/src/assets/productlist.png)
+![Products List](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/Frontend/src/assets/productlist.png)
 
-![Stores](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/src/assets/stores.png)
+![Stores](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/Frontend/src/assets/stores.png)
 
-![Store Search](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/src/assets/storesearch.png)
+![Store Search](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/Frontend/src/assets/storesearch.png)
 
-![Edit Product Details](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/src/assets/editproductdetails.png)
+![Edit Product Details](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/Frontend/src/assets/editproductdetails.png)
 
-![PDF Generation](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/src/assets/pdfgeneration.png)
+![PDF Generation](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/Frontend/src/assets/pdfgeneration.png)
 
 
 🔑 User Roles & Features
