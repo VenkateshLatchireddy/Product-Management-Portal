@@ -72,6 +72,10 @@ The frontend will run at: http://localhost:3000
 This will ensure clear backend startup instructions using node server.js. 🚀
 Let me know if you need any modifications! 😊
 
+Standard Login Credentials for store manager
+usename:   products@gmail.com
+password:  products
+
 🖼 Project Screenshots
 
 ![Login Page](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/Frontend/src/assets/loginpage.png)
