@@ -26,6 +26,8 @@ Database: MySQL
 Authentication: JWT-based authentication for store owners
 State Management: Context API / Redux
 PDF Generation: React-PDF / jsPDF
+
+
 🛠 Installation & Setup
 1️⃣ Clone the repository
 sh
@@ -33,6 +35,8 @@ Copy
 Edit
 git clone https://github.com/VenkateshLatchireddy/Product-Management-Portal.git
 cd Product-Management-Portal
+
+
 2️⃣ Install dependencies (Frontend & Backend)
 sh
 Copy
@@ -44,6 +48,8 @@ npm install
 # Navigate to the backend folder and install dependencies
 cd ../Backend
 npm install
+
+
 3️⃣ Start the Backend Server (Runs on Port 5000)
 sh
 Copy
@@ -51,6 +57,7 @@ Edit
 cd Backend
 node server.js
 The backend server will run at: http://localhost:5000
+
 
 4️⃣ Start the Frontend Server
 sh
