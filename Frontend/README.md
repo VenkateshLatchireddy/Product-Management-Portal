@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+📌 Product Management & Invoice Generation Portal
+This project is a React-based web application designed to manage products across multiple stores and generate invoices efficiently.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+📝 Project Overview
+This application consists of the following key features:
 
-## Available Scripts
+✅ Task 1: Invoice Generation Portal (Mandatory)
+Generates invoices for all stores.
+Displays order details, including:
+Store Name, Order ID, Date, Quantity
+Regular Price, Deal Price, Item Total, Item-wise Tax
+Grand Total (with & without tax)
+✅ Task 2: Product Management Portal (Mandatory)
+Displays all stores and products.
+CRUD operations (Edit, Delete, Update products).
+Allows filtering by store and searching by product name.
+⚡ Task 3: Additional Features (Optional)
+Filter invoices by date and item.
+Generate invoices in PDF format.
+Store Owners can log in and manage their store details.
+View and download invoices securely.
+🎯 Technologies Used
+Frontend: React.js (Styled Components for UI)
+Backend: Node.js + Express.js
+Database: MySQL
+Authentication: JWT-based authentication for store owners
+State Management: Context API / Redux
+PDF Generation: React-PDF / jsPDF
+🛠 Installation & Setup
+1️⃣ Clone the repository
+sh
+Copy
+Edit
+git clone https://github.com/VenkateshLatchireddy/Product-Management-Portal.git
+cd Product-Management-Portal
+2️⃣ Install dependencies (Frontend & Backend)
+sh
+Copy
+Edit
+# Navigate to the frontend folder and install dependencies
+cd Frontend
+npm install
 
-In the project directory, you can run:
+# Navigate to the backend folder and install dependencies
+cd ../Backend
+npm install
+3️⃣ Start the Backend Server (Runs on Port 5000)
+sh
+Copy
+Edit
+cd Backend
+node server.js
+The backend server will run at: http://localhost:5000
 
-### `npm start`
+4️⃣ Start the Frontend Server
+sh
+Copy
+Edit
+cd ../Frontend
+npm start
+The frontend will run at: http://localhost:3000
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This will ensure clear backend startup instructions using node server.js. 🚀
+Let me know if you need any modifications! 😊
+🖼 Project Screenshots
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Login Page](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/src/assets/loginpage.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Products List](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/src/assets/productlist.png)
 
-### `npm run build`
+![Stores](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/src/assets/stores.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Store Search](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/src/assets/storesearch.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Edit Product Details](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/src/assets/editproductdetails.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![PDF Generation](https://raw.githubusercontent.com/VenkateshLatchireddy/Product-Management-Portal/main/src/assets/pdfgeneration.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🔑 User Roles & Features
+Role	Features
+Store Owner	Login, Manage Store Details, View & Download Invoices
+Admin	Manage All Stores & Products, Generate Reports
+User (Read-only)	View Store Products
+🚀 Future Enhancements
+Export Reports (Excel, CSV)
+Multi-user roles & permissions
+Email invoices to customers
+Graphical sales reports & insights
+🤝 Contributing
+Contributions are welcome! Feel free to fork the repo, create a new branch, and submit a pull request.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+📜 License
+This project is licensed under the MIT License.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🎯 Let me know if you want any modifications! 🚀
+This version highlights your interview project professionally and makes it easy for the interviewer to understand your work.
