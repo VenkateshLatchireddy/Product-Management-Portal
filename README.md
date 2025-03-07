@@ -73,7 +73,9 @@ This will ensure clear backend startup instructions using node server.js. 🚀
 Let me know if you need any modifications! 😊
 
 Standard Login Credentials for store manager
+
 usename:   products@gmail.com
+
 password:  products
 
 🖼 Project Screenshots
