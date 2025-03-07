@@ -1,0 +1,144 @@
+USE product_management;
+select * from stores;
+describe stores;
+SHOW CREATE TABLE invoices;
+select* from products;
+describe products;
+select * from invoices;
+select* from users;
+DESCRIBE invoices;
+select* from invoice_items;
+describe invoice_items;
+CREATE TABLE stores (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    owner_email VARCHAR(255) UNIQUE NOT NULL
+);
+INSERT INTO stores (id, name, owner_email) VALUES 
+(1, 'Electronics Store', 'owner1@example.com'),
+(2, 'Mobile Store', 'owner2@example.com'),
+(3, 'Laptop Store', 'owner3@example.com'),
+(4, 'Grocery Store', 'owner4@example.com'),
+(5, 'Fashion Store', 'owner5@example.com'),
+(6, 'Furniture Store', 'owner6@example.com');
+
+INSERT INTO stores (id, name, owner_email) VALUES
+(7, 'Sports Store', 'owner7@example.com'),
+(8, 'Bookstore', 'owner8@example.com'),
+(9, 'Toy Store', 'owner9@example.com'),
+(10, 'Jewelry Store', 'owner10@example.com'),
+(11, 'Pharmacy', 'owner11@example.com'),
+(12, 'Automobile Store', 'owner12@example.com'),
+(13, 'Home Decor Store', 'owner13@example.com'),
+(14, 'Pet Store', 'owner14@example.com'),
+(15, 'Hardware Store', 'owner15@example.com'),
+(16, 'Supermarket', 'owner16@example.com'),
+(17, 'Gift Shop', 'owner17@example.com'),
+(18, 'Gaming Store', 'owner18@example.com'),
+(19, 'Music Store', 'owner19@example.com'),
+(20, 'Shoe Store', 'owner20@example.com');
+
+
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    store_id INT NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,  -- Store hashed passwords
+    FOREIGN KEY (store_id) REFERENCES stores(id) ON DELETE CASCADE
+);
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    store_id INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    regular_price DECIMAL(10,2) NOT NULL,
+    deal_price DECIMAL(10,2),
+    stock INT DEFAULT 0,
+    FOREIGN KEY (store_id) REFERENCES stores(id) ON DELETE CASCADE
+);
+INSERT INTO products (store_id, name, regular_price, deal_price, stock) VALUES
+-- Sports Store (7)
+(7, 'Football', 1500.00, 1400.00, 50),
+(7, 'Cricket Bat', 3000.00, 2800.00, 30),
+(7, 'Yoga Mat', 1200.00, 1100.00, 40),
+
+-- Bookstore (8)
+(8, 'The Alchemist', 500.00, 450.00, 100),
+(8, 'Atomic Habits', 600.00, 550.00, 80),
+(8, 'Rich Dad Poor Dad', 550.00, 500.00, 90),
+
+-- Toy Store (9)
+(9, 'LEGO Classic Set', 2500.00, 2300.00, 40),
+(9, 'Remote Control Car', 1800.00, 1600.00, 35),
+(9, 'Teddy Bear', 1200.00, 1000.00, 50),
+
+-- Jewelry Store (10)
+(10, 'Gold Necklace', 75000.00, 72000.00, 10),
+(10, 'Silver Bracelet', 5000.00, 4500.00, 20),
+(10, 'Diamond Ring', 90000.00, 88000.00, 5),
+
+-- Pharmacy (11)
+(11, 'Vitamin C Tablets', 300.00, 280.00, 200),
+(11, 'Paracetamol 500mg', 50.00, 45.00, 500),
+(11, 'Cough Syrup 100ml', 250.00, 220.00, 150),
+
+-- Automobile Store (12)
+(12, 'Car Engine Oil 5L', 4000.00, 3800.00, 50),
+(12, 'Helmet', 2500.00, 2300.00, 40),
+(12, 'Car Cover', 1800.00, 1600.00, 30),
+
+-- Home Decor Store (13)
+(13, 'Wall Clock', 1500.00, 1300.00, 20),
+(13, 'Table Lamp', 2500.00, 2300.00, 25),
+(13, 'Photo Frame Set', 1200.00, 1000.00, 30),
+
+-- Pet Store (14)
+(14, 'Dog Food 5kg', 3000.00, 2800.00, 60),
+(14, 'Cat Litter 10kg', 1800.00, 1600.00, 40),
+(14, 'Bird Cage', 2500.00, 2300.00, 25),
+
+-- Hardware Store (15)
+(15, 'Power Drill Machine', 4500.00, 4200.00, 15),
+(15, 'Screwdriver Set', 1200.00, 1000.00, 30),
+(15, 'Hammer', 800.00, 700.00, 40),
+
+-- Supermarket (16)
+(16, 'Milk 1L', 80.00, 75.00, 200),
+(16, 'Bread Pack', 50.00, 45.00, 150),
+(16, 'Cooking Oil 1L', 250.00, 220.00, 100),
+
+-- Gift Shop (17)
+(17, 'Gift Box Set', 1000.00, 900.00, 40),
+(17, 'Greeting Cards Pack', 500.00, 450.00, 60),
+(17, 'Scented Candles', 1200.00, 1100.00, 30),
+
+-- Gaming Store (18)
+(18, 'PlayStation 5', 55000.00, 52000.00, 10),
+(18, 'Xbox Series X', 50000.00, 48000.00, 12),
+(18, 'Gaming Mouse', 5000.00, 4500.00, 30),
+
+-- Music Store (19)
+(19, 'Acoustic Guitar', 12000.00, 11000.00, 15),
+(19, 'Bluetooth Speaker', 5000.00, 4500.00, 25),
+(19, 'Headphones', 3000.00, 2700.00, 40),
+
+-- Shoe Store (20)
+(20, 'Formal Leather Shoes', 7000.00, 6500.00, 30),
+(20, 'Casual Sneakers', 5000.00, 4500.00, 40),
+(20, 'Flip-Flops', 1500.00, 1200.00, 50);
+CREATE TABLE invoices (
+    id INT AUTO_INCREMENT PRIMARY KEY,          -- Unique ID for the invoice
+    store_name VARCHAR(255) NOT NULL,           -- Store name
+    order_id INT NOT NULL,                      -- Order ID
+    order_date DATE NOT NULL,                   -- Order Date
+    quantity INT NOT NULL,                      -- Quantity of items
+    regular_price DECIMAL(10, 2) NOT NULL,      -- Regular price of the item
+    deal_price DECIMAL(10, 2) NOT NULL,         -- Deal price of the item
+    item_total DECIMAL(10, 2) NOT NULL,         -- Total price for the item (quantity * deal_price)
+    tax DECIMAL(10, 2) NOT NULL,                -- Item-wise tax
+    grand_total_without_tax DECIMAL(10, 2) NOT NULL, -- Grand total without tax
+    grand_total_with_tax DECIMAL(10, 2) NOT NULL -- Grand total with tax
+);
+
+

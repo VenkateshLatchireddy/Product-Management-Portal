@@ -1,0 +1,102 @@
+/* 🌟 Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c91e8b;
+    padding: 15px 50px;
+    height: 60px;
+    position: relative;
+  }
+  
+  /* 🏠 Navbar Items */
+  .nav-logo h2, .nav-title h1 {
+    color: white;
+    margin: 0;
+  }
+  
+  .nav-title {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .nav-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* 🔘 Buttons */
+  .nav-button {
+    padding: 10px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    background-color: #0056b3;
+  }
+  .nav-button {
+    padding: 10px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .nav-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Zoom effect */
+  }
+  
+  
+  /* 🖥️ Responsive Design */
+  @media (max-width: 1024px) {
+    .navbar {
+      padding: 15px 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-title h1 {
+      font-size: 24px;
+    }
+  
+    .nav-button {
+      padding: 8px 14px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 10px 20px;
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .nav-logo h2 {
+      font-size: 16px;
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .nav-title h1 {
+      font-size: 20px;
+      text-align: center;
+    }
+  
+    .nav-actions {
+      margin-top: 10px;
+    }
+  
+    .nav-button {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
